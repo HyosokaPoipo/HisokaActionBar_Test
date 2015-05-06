@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.hisoka.actionbartest"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="11"
+        android:targetSdkVersion="19" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        
+        android:label="Hisoka App" >
+        <activity
+            android:name="com.hisoka.actionbartest.ActionBarActivity"
+            android:icon="@drawable/connect_glooming"
+            android:label="Hisoka" >
+            
+        </activity>
+        <activity
+            android:name="com.hisoka.actionbartest.HisokaActivity"
+            android:icon="@drawable/connect_glooming"
+            android:label="Hisoka&apos;s Info"
+            android:parentActivityName="com.hisoka.actionbartest.ActionBarActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.myfirstapp.MainActivity" />
+        </activity>
+        <activity
+            android:name="com.hisoka.actionbartest.MainScreenActivity"
+            android:logo="@drawable/disconnect_glooming"
+            android:label="Hisoka ActionBar"
+            
+             >
+            
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            
+        </activity>
+    </application>
+
+</manifest>
